@@ -2,7 +2,7 @@ ARG ARCH
 ARG VERSION
 ARG VARIANT
 
-FROM scratch:${VERSION}
+FROM ghcr.io/somic-reserach-development-software/spider:${VERSION}
 
 ARG ARCH
 ARG VERSION
