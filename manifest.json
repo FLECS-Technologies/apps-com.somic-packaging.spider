@@ -1,10 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/FLECS-Technologies/app-sdk/3.0.0/manifest.schema.json",
     "_schemaVersion": "3.0.0",
-    "app": "",
+    "app": "com.somic-packaging.spider",
     "version": "##VERSION##",
     "revision": "0",
-    "image": "flecs.azurecr.io/",
+    "image": "flecs.azurecr.io/com.somic-packaging.spider",
     "multiInstance": false,
     "editors": [
         {
