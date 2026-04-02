@@ -8,36 +8,32 @@
     "multiInstance": false,
     "editors": [
         {
-            "name": "My UI",
-            "port": 6789,
-            "supportsReverseProxy": true
+            "name": "Somic Spider",
+            "port": 5001,
+            "supportsReverseProxy": false
         }
     ],
     "args": [
-        "--launch-arg-1",
-        "--launch-arg-2=8000"
-    ],
-    "capabilities": [],
-    "conffiles": [
-        "default.conf:/etc/my-app/default.conf",
-        "default.conf:/etc/my-app/default.conf:ro",
-        "default.conf:/etc/my-app/default.conf:rw"
-    ],
-    "devices": [
-        "/dev/net/tun"
+        "--mount type=tmpfs,destination=/mediamtx/recordings,tmpfs-size=1024m,tmpfs-mode=1777"
     ],
     "env": [
-        "MY_ENV=value"
+        "HOST_IP=127.0.0.1",
+        "CAMS_FILE=/data/cams.json",
+        "USER_STREAMS=/data/user_streams.json",
+        "REQUEST_TIMEOUT=10",
+        "DEBUG=false",
+        "STREAMS_MAX_PER_CAM=2",
+        "CAMS_MAX=10",
+        "CONNECTIONS_MAX=20",
+        "CLOUD_ACTIVATE=false",
+        "CLOUD_API_URL=https://api.somic-packaging.com",
+        "CLOUD_API_KEY=12345",
+        "HEARTBEAT_INTERVAL=15"
     ],
     "ports": [
-        "12345:12345"
+        "5001:5001"
     ],
     "volumes": [
-        "my-app-etc:/etc/my-app",
-        "/var/lib/my-app:/var/lib/my-app"
-    ],
-    "labels": [
-        "org.my.label",
-        "org.my.label-with-value=Some custom label value"
+        "/home/somic/app/spider/:/data"
     ]
 }
