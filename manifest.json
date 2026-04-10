@@ -17,7 +17,7 @@
         "--mount type=tmpfs,destination=/mediamtx/recordings,tmpfs-size=1024m,tmpfs-mode=1777"
     ],
     "env": [
-        "HOST_IP=127.0.0.1",
+        "STREAM_HOST_IP=127.0.0.1",
         "CAMS_FILE=/data/cams.json",
         "USER_STREAMS=/data/user_streams.json",
         "REQUEST_TIMEOUT=10",
