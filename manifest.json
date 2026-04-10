@@ -17,7 +17,7 @@
         "--mount type=tmpfs,destination=/mediamtx/recordings,tmpfs-size=1024m,tmpfs-mode=1777"
     ],
     "env": [
-        "STREAM_HOST_IP=127.0.0.1",
+        "HOST_IP=127.0.0.1",
         "CAMS_FILE=/data/cams.json",
         "USER_STREAMS=/data/user_streams.json",
         "REQUEST_TIMEOUT=10",
@@ -31,7 +31,9 @@
         "HEARTBEAT_INTERVAL=15"
     ],
     "ports": [
-        "5001:5001"
+        "5001:5001",
+        "8554:8554",
+        "8554/udp:8554/udp"
     ],
     "volumes": [
         "/home/somic/app/spider/:/data"
