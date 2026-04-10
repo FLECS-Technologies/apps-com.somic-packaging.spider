@@ -33,7 +33,7 @@
     "ports": [
         "5001:5001",
         "8554:8554",
-        "8554/udp:8554/udp"
+        "8888:8888"
     ],
     "volumes": [
         "/home/somic/app/spider/:/data"
