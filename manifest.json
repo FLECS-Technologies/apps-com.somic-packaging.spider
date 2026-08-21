@@ -9,33 +9,30 @@
     "editors": [
         {
             "name": "Somic Spider",
-            "port": 5001,
+            "port": 6700,
             "supportsReverseProxy": false
         }
     ],
     "args": [
-        "--mount type=tmpfs,destination=/mediamtx/recordings,tmpfs-size=1024m,tmpfs-mode=1777"
+        ""
     ],
     "env": [
-        "HOST_IP=127.0.0.1",
-        "CAMS_FILE=/data/cams.json",
-        "USER_STREAMS=/data/user_streams.json",
-        "REQUEST_TIMEOUT=10",
-        "DEBUG=false",
-        "STREAMS_MAX_PER_CAM=2",
-        "CAMS_MAX=10",
-        "CONNECTIONS_MAX=20",
-        "CLOUD_ACTIVATE=false",
-        "CLOUD_API_URL=https://api.somic-packaging.com",
-        "CLOUD_API_KEY=12345",
-        "HEARTBEAT_INTERVAL=15"
+        "API_HOST=127.0.0.1",
+        "API_PORT=6700",
+        "MEDIAMTX_API=http://localhost:9997",
+        "MEDIAMTX_RTSP=rtsp://localhost:8554",
+        "MEDIAMTX_HLS=http://localhost:8888",
+        "SAVE_FILE=./data/db.json",
+        "CAMERA_LIMIT=10",
+        "STREAM_LIMIT=5",
+        "MAX_BUFFER_DURATION=60"
     ],
     "ports": [
-        "5001:5001",
+        "6700:6700",
         "8554:8554",
         "8888:8888"
     ],
     "volumes": [
-        "/home/somic/app/spider/:/data"
+        "/home/somic/app/spider/:/app/data"
     ]
 }
