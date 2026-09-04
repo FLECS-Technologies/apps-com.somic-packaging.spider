@@ -14,15 +14,22 @@
         }
     ],
     "env": [
-        "API_HOST=127.0.0.1",
-        "API_PORT=6700",
-        "MEDIAMTX_API=http://localhost:9997",
-        "MEDIAMTX_RTSP=rtsp://localhost:8554",
-        "MEDIAMTX_HLS=http://localhost:8888",
-        "SAVE_FILE=./data/db.json",
-        "CAMERA_LIMIT=10",
-        "STREAM_LIMIT=5",
-        "MAX_BUFFER_DURATION=60"
+        "HOST=127.0.0.1",
+        "PORT=6700",
+        "MTX_HOST=127.0.0.1",
+        "MTX_PORT=9997",
+        "RTSP_PORT=8554",
+        "HLS_PORT=8888",
+        "DEBUG=false",
+        "LOG_LEVEL=info",
+        "LOG_FORMAT=json",
+        "CLIPS_DIR=./clips",
+        "CLIP_MAX_AGE=2h",
+        "CLIP_CLEAN_INTERVAL=15m",
+        "DB_FILE=./data/db.json",
+        "MAX_CAMS=7",
+        "MAX_STREAMS=3",
+        "MAX_BUFFER=60"
     ],
     "ports": [
         "6700:6700",
